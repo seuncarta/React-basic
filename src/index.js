@@ -20,33 +20,98 @@ formatting
 
 //Nested Components Feature
 
+const firstBook = {
+  img: "https://m.media-amazon.com/images/I/51p2SDOCV9L._SX482_BO1,204,203,200_.jpg",
+  title: "I Love You to the Moon and Back",
+  author: "Amelia Hepworth"
+}
+
+const secondBook = {
+  img: "https://m.media-amazon.com/images/I/61aCVDVZPzL._SX484_BO1,204,203,200_.jpg",
+  title: "How to Catch a Turkey",
+  author: "Adam Wallace"
+}
+
+const thirdBook = {
+  img: "https://m.media-amazon.com/images/I/51VC+Vru96L._SX320_BO1,204,203,200_.jpg",
+  title: "It Starts with Us",
+  author: "Colleen Hoover"
+}
+
+const fourthBook = {
+  img: "https://m.media-amazon.com/images/I/51ECRZXoGyL._SX327_BO1,204,203,200_.jpg",
+  title: "Fairy Tale",
+  author: "Stephen King"
+}
+
+const fifthBook = {
+  img: "https://m.media-amazon.com/images/I/41mBCtaJ1XL._SX320_BO1,204,203,200_.jpg",
+  title: "Ugly Love",
+  author: "Colleen Hoover"
+}
+
+const sixthBook = {
+  img: "https://m.media-amazon.com/images/I/41n9-p6-PpL._SX331_BO1,204,203,200_.jpg",
+  title: "Reminders of Him",
+  author: "Colleen Hoover"
+}
+
 function BookList() {
   return (
-    <section>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+    <section className="bookList">
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
+
+      <Book
+        img={thirdBook.img}
+        title={thirdBook.title}
+        author={thirdBook.author}
+      />
+
+      <Book
+        img={fourthBook.img}
+        title={fourthBook.title}
+        author={fourthBook.author}
+      />
+
+      <Book
+        img={fifthBook.img}
+        title={fifthBook.title}
+        author={fifthBook.author}
+      />
+
+      <Book
+        img={sixthBook.img}
+        title={sixthBook.title}
+        author={sixthBook.author}
+      />
     </section>
   );
 }
 
-const Book = () => {
+
+const Book = (madrid) => {
   return (
-    <article>
-      <Image />
-      <Title />
-      <Author />
+    <article className="book">
+      <img style={{ width: "45%", height:"160px" }}
+        src={madrid.img}
+        alt="" />
+      <h1>{madrid.title}</h1>
+      <h4>{madrid.author}</h4>
     </article>
 
   );
 }
-const Image = () => <img src="https://m.media-amazon.com/images/I/51p2SDOCV9L._SX482_BO1,204,203,200_.jpg" alt="" srcset="" />
-const Title = () => <h1>I Love You to the Moon and Back</h1>;
-const Author = () => <h4>By Amelia Hepworth</h4>;
+
 
 
 // const Greeting = () => {
