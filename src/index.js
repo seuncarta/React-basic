@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDom from 'react-dom';
 
+//CSS
+import './index.css'
+
 //statelss functional component
 //always return JSX
 
@@ -17,32 +20,38 @@ formatting
 
 //Nested Components Feature
 
-function Greeting() {
+function BookList() {
   return (
     <section>
-      <div>
-        <Person />
-        <Message />
-        {/* <ul>
-          <li>
-            <a href="#">Hello Guys</a>
-          </li>
-          <input type="text" />
-        </ul> */}
-      </div>;
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
     </section>
   );
 }
 
-const Person = () => <h2>Seun Carta</h2>;
-const Message = () => {
-  return <p>This is my first component</p>
-};
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+
+  );
+}
+const Image = () => <img src="https://m.media-amazon.com/images/I/51p2SDOCV9L._SX482_BO1,204,203,200_.jpg" alt="" srcset="" />
+const Title = () => <h1>I Love You to the Moon and Back</h1>;
+const Author = () => <h4>By Amelia Hepworth</h4>;
 
 
 // const Greeting = () => {
 //   return React.createElement("div", {}, React.createElement("h1", {}, "Helllo World"));
 // }
 
-ReactDom.render(<Greeting />, document.getElementById('root'));
+ReactDom.render(<BookList />, document.getElementById('root'));
 
